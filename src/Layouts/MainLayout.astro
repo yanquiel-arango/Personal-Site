@@ -1,0 +1,33 @@
+---
+import NavBar from '../components/Nav.jsx';
+import Footer from '../components/Footer.jsx';
+import 'bulma/css/bulma.min.css';
+
+let {title} = Astro.props
+
+---
+
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{title}</title>
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />	
+</head>
+<body>
+	
+		<header >
+		<NavBar client:visible/>
+		</header>
+
+        <slot></slot>
+
+		
+    <Footer />
+		
+	
+</body>
+</html>
